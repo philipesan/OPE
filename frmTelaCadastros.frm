@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmTelaCadastros 
-   Caption         =   "Form1"
+   Caption         =   "EAC - Tela de Cadastros"
    ClientHeight    =   3105
    ClientLeft      =   120
    ClientTop       =   450
@@ -83,6 +83,10 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Private Sub cbCategoris_Click()
+frmCategoria.Show
+End Sub
+
 Private Sub cbPonto_Click()
 frmPonto.Show
 End Sub
@@ -93,9 +97,18 @@ Private Sub Command1_Click()
 
 End Sub
 
+Private Sub cbStatus_Click()
+frmStatus.Show
+End Sub
+
 Private Sub Form_Load()
 lbBanco.Caption = App.Path & "\" & "database" & "\" & "database.mdb"
 sFilePath = lbBanco.Caption
 sLogPath = App.Path & "\" & "log.txt"
 Call CriaBanco(sFilePath)
+End Sub
+
+Private Sub tbCargo_Click()
+frmCargo.Show
+
 End Sub

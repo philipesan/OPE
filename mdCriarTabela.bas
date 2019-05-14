@@ -21,7 +21,7 @@ Public Sub CriaTabelasCategorias()
 
 'Adiciona a Tabela e as linhas
 Call Log("Criando Tabela categorias...")
-dbtemp.Execute ("Create table categorias (id_categoria autoincrement, nome text(45), adicional float)")
+dbtemp.Execute ("Create table categorias (id_categoria autoincrement, nome text(45), adicional money)")
 dbtemp.Execute ("Create index chavecategoria on categorias(id_categoria)")           'Adiciona o indice da tabela
 Call Log("Tabela categorias criada com sucesso!")
 
@@ -40,7 +40,7 @@ Public Sub CriaTabelasCargos()
 
 'Adiciona a Tabela e as linhas
 Call Log("Criando Tabela cargos...")
-dbtemp.Execute ("Create table cargos (id_cargo autoincrement, nome text(50))")
+dbtemp.Execute ("Create table cargos (id_cargo autoincrement, nome text(50), salario money, acesso_admin int, acesso_rh int)")
 dbtemp.Execute ("Create index chavecargos on cargos(id_cargo)")           'Adiciona o indice da tabela
 Call Log("Tabela cargos criada com sucesso!")
 

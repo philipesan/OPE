@@ -68,7 +68,7 @@ Begin VB.Form frmPonto
          Height          =   315
          ItemData        =   "frmPonto.frx":0000
          Left            =   2400
-         List            =   "frmPonto.frx":000D
+         List            =   "frmPonto.frx":0010
          TabIndex        =   18
          Top             =   240
          Width           =   2055
@@ -198,4 +198,56 @@ rs.Close
 con.Close
 
 End Sub
+Private Sub tbAberturaMins_KeyPress(KeyAscii As Integer)
+    If KeyAscii = vbKeyBack Then Exit Sub
+    If KeyAscii < vbKey0 Or KeyAscii > vbKey9 Then
+        KeyAscii = 0
+        MsgBox "Apenas valores numéricos!", vbCritical
+    End If
+End Sub
+Private Sub tbAberturaHrs_KeyPress(KeyAscii As Integer)
+    If KeyAscii = vbKeyBack Then Exit Sub
+    If KeyAscii < vbKey0 Or KeyAscii > vbKey9 Then
+        KeyAscii = 0
+        MsgBox "Apenas valores numéricos!", vbCritical
+    End If
+End Sub
 
+Private Sub tbCep_KeyPress(KeyAscii As Integer)
+
+    If KeyAscii = vbKeyBack Then Exit Sub
+    If KeyAscii < vbKey0 Or KeyAscii > vbKey9 Then
+        KeyAscii = 0
+        MsgBox "Apenas valores numéricos!", vbCritical
+    End If
+End Sub
+
+Private Sub tbFechamentoHrs_KeyPress(KeyAscii As Integer)
+    If KeyAscii = vbKeyBack Then Exit Sub
+    If KeyAscii < vbKey0 Or KeyAscii > vbKey9 Then
+        KeyAscii = 0
+        MsgBox "Apenas valores numéricos!", vbCritical
+    End If
+End Sub
+
+Private Sub tbFechamentoMins_KeyPress(KeyAscii As Integer)
+    If KeyAscii = vbKeyBack Then Exit Sub
+    If KeyAscii < vbKey0 Or KeyAscii > vbKey9 Then
+        KeyAscii = 0
+        MsgBox "Apenas valores numéricos!", vbCritical
+    End If
+End Sub
+Private Sub tbNumero_KeyPress(KeyAscii As Integer)
+    If KeyAscii = vbKeyBack Then Exit Sub
+    If KeyAscii < vbKey0 Or KeyAscii > vbKey9 Then
+        KeyAscii = 0
+        MsgBox "Apenas valores numéricos!", vbCritical
+    End If
+End Sub
+Private Sub tbTelefone_KeyPress(KeyAscii As Integer)
+    If KeyAscii = vbKeyBack Then Exit Sub
+    If KeyAscii < vbKey0 Or KeyAscii > vbKey9 Then
+        KeyAscii = 0
+        MsgBox "Apenas valores numéricos!", vbCritical
+    End If
+End Sub

@@ -33,13 +33,6 @@ CSQL = CSQL & "')"
 Call ExecutarQuery(CSQL)
 
 
-nome = "Gerente"
-cargo = 1
-CSQL = "INSERT INTO cargos (nome)"
-CSQL = CSQL & "VALUES('"
-CSQL = CSQL & nome
-CSQL = CSQL & "')"
-
 Call ExecutarQuery(CSQL)
 Call FecharDatabase
 

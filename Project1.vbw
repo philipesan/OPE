@@ -1,0 +1,13 @@
+frmTelaCadastros = 175, 175, 1422, 822, , 25, 25, 1272, 672, C
+frmPonto = 75, 75, 1322, 722, Z, 37, 259, 1284, 875, C
+mdPublicVars = 83, 121, 1330, 765, 
+mdCriaBanco = 150, 153, 1397, 797, 
+mdCriarTabela = 111, 223, 1358, 870, 
+frmLog = 225, 225, 1614, 706, , 175, 175, 1422, 822, C
+mdExportaBanco = 125, 125, 1372, 772, 
+mdFuncionarioTeste = 150, 150, 1397, 797, 
+mdDBManagement = 250, 250, 1497, 897, 
+mdLog = 275, 275, 1522, 922, 
+frmStatus = 100, 100, 1489, 581, , 25, 25, 1272, 672, C
+frmCategoria = 0, 0, 1247, 647, , 50, 50, 1297, 697, C
+frmCargo = 175, 175, 1422, 822, , 150, 150, 1397, 797, C
