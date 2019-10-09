@@ -1,11 +1,15 @@
 VERSION 5.00
 Begin VB.Form frmPonto 
+   BackColor       =   &H8000000D&
+   BorderStyle     =   1  'Fixed Single
    Caption         =   "Cadastro de Ponto"
    ClientHeight    =   3195
-   ClientLeft      =   120
-   ClientTop       =   450
+   ClientLeft      =   45
+   ClientTop       =   375
    ClientWidth     =   7335
    LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
    ScaleHeight     =   3195
    ScaleWidth      =   7335
    StartUpPosition =   3  'Windows Default
@@ -58,6 +62,7 @@ Begin VB.Form frmPonto
       Width           =   375
    End
    Begin VB.Frame frFuncionamento 
+      BackColor       =   &H8000000D&
       Caption         =   "Horário de funcionamento:"
       Height          =   735
       Left            =   240
@@ -82,6 +87,7 @@ Begin VB.Form frmPonto
          Width           =   375
       End
       Begin VB.Label lbSinal 
+         BackColor       =   &H8000000D&
          Caption         =   "/"
          Height          =   375
          Left            =   1200
@@ -120,6 +126,7 @@ Begin VB.Form frmPonto
       Width           =   4575
    End
    Begin VB.Label lbCep 
+      BackColor       =   &H8000000D&
       Caption         =   "CEP:"
       Height          =   255
       Left            =   2640
@@ -128,6 +135,7 @@ Begin VB.Form frmPonto
       Width           =   2055
    End
    Begin VB.Label lbHorario 
+      BackColor       =   &H8000000D&
       Caption         =   "Gerente:"
       Height          =   255
       Left            =   4920
@@ -136,6 +144,7 @@ Begin VB.Form frmPonto
       Width           =   2055
    End
    Begin VB.Label lbTelefone 
+      BackColor       =   &H8000000D&
       Caption         =   "Telefone:"
       Height          =   255
       Left            =   240
@@ -144,6 +153,7 @@ Begin VB.Form frmPonto
       Width           =   2055
    End
    Begin VB.Label lbNumero 
+      BackColor       =   &H8000000D&
       Caption         =   "Número:"
       Height          =   255
       Left            =   4920
@@ -152,6 +162,7 @@ Begin VB.Form frmPonto
       Width           =   2055
    End
    Begin VB.Label lbEndereco 
+      BackColor       =   &H8000000D&
       Caption         =   "Endereço:"
       Height          =   255
       Left            =   240
@@ -197,7 +208,14 @@ Loop
 rs.Close
 con.Close
 
+frmTelaCadastros.Enabled = False
+
+
 End Sub
+Private Sub Form_Unload(Cancel As Integer)
+    frmTelaCadastros.Enabled = True
+End Sub
+
 Private Sub tbAberturaMins_KeyPress(KeyAscii As Integer)
     If KeyAscii = vbKeyBack Then Exit Sub
     If KeyAscii < vbKey0 Or KeyAscii > vbKey9 Then

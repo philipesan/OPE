@@ -19,11 +19,12 @@ If Not fso.FileExists(file) Then
     Call CriaTabelasPontos
     Call CriaTabelasStatus
     Call CriaTabelasCategorias
-    Call CriaTabelasFuncionarios
     Call CriaTabelasCargos
+    Call CriaTabelasFuncionarios
+    Call CriaTabelasServicos
+    Call CriaTabelasOrdem
+    Call CriaTabelasOrdem_Servicos
     dbtemp.Close
-    Call Log("Populando funcionarios com testes...")
-    Call ExportaFuncionarioTeste
 End If
 
 End Sub

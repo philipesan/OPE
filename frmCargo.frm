@@ -1,11 +1,15 @@
 VERSION 5.00
 Begin VB.Form frmCargo 
+   BackColor       =   &H8000000D&
+   BorderStyle     =   1  'Fixed Single
    Caption         =   "Cadastro de Cargos"
    ClientHeight    =   3030
-   ClientLeft      =   120
-   ClientTop       =   450
+   ClientLeft      =   45
+   ClientTop       =   375
    ClientWidth     =   4560
    LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
    ScaleHeight     =   3030
    ScaleWidth      =   4560
    StartUpPosition =   3  'Windows Default
@@ -26,6 +30,7 @@ Begin VB.Form frmCargo
       Width           =   1335
    End
    Begin VB.CheckBox ckRh 
+      BackColor       =   &H8000000D&
       Caption         =   "Acesso RH"
       Height          =   375
       Left            =   120
@@ -34,6 +39,7 @@ Begin VB.Form frmCargo
       Width           =   2655
    End
    Begin VB.CheckBox ckAdmin 
+      BackColor       =   &H8000000D&
       Caption         =   "Acesso Administrador"
       Height          =   375
       Left            =   120
@@ -45,6 +51,7 @@ Begin VB.Form frmCargo
       Height          =   375
       Left            =   120
       TabIndex        =   3
+      Text            =   "0000,00"
       Top             =   1440
       Width           =   4215
    End
@@ -56,6 +63,7 @@ Begin VB.Form frmCargo
       Width           =   4215
    End
    Begin VB.Label lbSalario 
+      BackColor       =   &H8000000D&
       Caption         =   "Salário:"
       Height          =   375
       Left            =   120
@@ -64,6 +72,7 @@ Begin VB.Form frmCargo
       Width           =   2535
    End
    Begin VB.Label lbNome 
+      BackColor       =   &H8000000D&
       Caption         =   "Nome: "
       Height          =   375
       Left            =   120
@@ -78,16 +87,33 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub cbCadastrar_Click()
-Call ExportaBancoCargo
+'Checa se os campos estão preenchidos com os dados corretos
+
+If IsNumeric(tbSalario.text) Then
+    Call ExportaBancoCargo
+Else
+    MsgBox "O campo salário é apenas numérico", vbCritical, "Erro"
+    tbSalario.text = ""
+End If
+
 End Sub
 
 Private Sub cbLimpar_Click()
 tbSalario.text = ""
 tbNome.text = ""
-ckAdmin.Value = 0
-ckRh.Value = 0
+ckAdmin.value = 0
+ckRh.value = 0
 
 End Sub
+
+Private Sub Form_Load()
+    frmTelaCadastros.Enabled = False
+End Sub
+Private Sub Form_Unload(Cancel As Integer)
+    frmTelaCadastros.Enabled = True
+End Sub
+
+
 
 Private Sub tbSalario_LostFocus()
     tbSalario.text = Format(tbSalario.text, "#####0.00")

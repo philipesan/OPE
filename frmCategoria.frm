@@ -1,12 +1,16 @@
 VERSION 5.00
 Begin VB.Form frmCategoria 
+   BackColor       =   &H8000000D&
+   BorderStyle     =   1  'Fixed Single
    Caption         =   "Cadastro de Categoria"
    ClientHeight    =   1245
-   ClientLeft      =   120
-   ClientTop       =   450
+   ClientLeft      =   45
+   ClientTop       =   375
    ClientWidth     =   7335
    ClipControls    =   0   'False
    LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
    ScaleHeight     =   1245
    ScaleWidth      =   7335
    StartUpPosition =   3  'Windows Default
@@ -30,6 +34,7 @@ Begin VB.Form frmCategoria
       Height          =   375
       Left            =   3840
       TabIndex        =   2
+      Text            =   "0000,00"
       Top             =   480
       Width           =   2295
    End
@@ -41,6 +46,7 @@ Begin VB.Form frmCategoria
       Width           =   3495
    End
    Begin VB.Label lbAdicional 
+      BackColor       =   &H8000000D&
       Caption         =   "Adicional:"
       Height          =   255
       Left            =   3840
@@ -49,6 +55,7 @@ Begin VB.Form frmCategoria
       Width           =   1215
    End
    Begin VB.Label lbnome 
+      BackColor       =   &H8000000D&
       Caption         =   "Nome:"
       Height          =   255
       Left            =   120
@@ -62,10 +69,16 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
-
 Private Sub cbCadastrar_Click()
-Call ExportaBancoCategoria
+'Checa se os campos estão preenchidos com os dados corretos
+
+If IsNumeric(tbAdicional.text) Then
+    Call ExportaBancoCategoria
+Else
+    MsgBox "O campo Adicional é apenas numérico", vbCritical, "Erro"
+    tbAdicional.text = ""
+End If
+
 End Sub
 
 Private Sub cbLimpar_Click()
@@ -73,6 +86,15 @@ tbAdicional.text = ""
 tbNome.text = ""
 
 End Sub
+
+Private Sub Form_Load()
+    frmTelaCadastros.Enabled = False
+End Sub
+Private Sub Form_Unload(Cancel As Integer)
+    frmTelaCadastros.Enabled = True
+End Sub
+
+
 
 Private Sub tbAdicional_LostFocus()
     tbAdicional.text = Format(tbAdicional.text, "#####0.00")
