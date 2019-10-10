@@ -22,7 +22,7 @@ If Not fso.FileExists(file) Then
     Call CriaTabelasCargos
     Call CriaTabelasFuncionarios
     Call CriaTabelasServicos
-    Call CriaTabelasOrdem
+    Call CriaTabelasOrdens
     Call CriaTabelasOrdem_Servicos
     dbtemp.Close
 End If
