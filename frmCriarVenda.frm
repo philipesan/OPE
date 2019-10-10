@@ -244,6 +244,44 @@ Begin VB.Form frmCriarVenda
          Width           =   495
       End
    End
+   Begin VB.Label lbTotalValor 
+      Alignment       =   1  'Right Justify
+      BackColor       =   &H8000000D&
+      Caption         =   "000.00"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   30
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   975
+      Left            =   8400
+      TabIndex        =   33
+      Top             =   8400
+      Width           =   2655
+   End
+   Begin VB.Label lbTotal 
+      Alignment       =   2  'Center
+      BackColor       =   &H8000000D&
+      Caption         =   "Total: R$"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   22.5
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   855
+      Left            =   6120
+      TabIndex        =   32
+      Top             =   8400
+      Width           =   2175
+   End
    Begin VB.Line Line1 
       BorderWidth     =   2
       DrawMode        =   1  'Blackness
@@ -333,6 +371,7 @@ Private Sub cbAdicionar_Click()
             End If
             lbSubvalor.Caption = SubTotal
             fgVendaItens.AddItem Servico & Chr(9) & ServicoNome & Chr(9) & Adicional & Chr(9) & Desconto & Chr(9) & SubTotal & Chr(9)
+            lbTotalValor.Caption = Format(CDbl(lbTotalValor.Caption) + SubTotal, "#####0.00")
         End If
     End If
 End Sub
