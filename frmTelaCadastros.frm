@@ -3,19 +3,27 @@ Begin VB.Form frmTelaCadastros
    BackColor       =   &H8000000D&
    Caption         =   "EAC - Estética Automotiva"
    ClientHeight    =   9360
-   ClientLeft      =   165
-   ClientTop       =   810
+   ClientLeft      =   285
+   ClientTop       =   705
    ClientWidth     =   13290
    LinkTopic       =   "Form1"
    ScaleHeight     =   9360
    ScaleWidth      =   13290
-   StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton cbRelatorios 
+      Appearance      =   0  'Flat
+      Caption         =   "Relatórios"
+      Height          =   735
+      Left            =   3120
+      TabIndex        =   15
+      Top             =   4560
+      Width           =   1935
+   End
    Begin VB.CommandButton addUser 
       Appearance      =   0  'Flat
       Caption         =   "Adicionar Usuario"
       Height          =   735
       Left            =   5760
-      TabIndex        =   16
+      TabIndex        =   14
       Top             =   120
       Width           =   1935
    End
@@ -24,7 +32,7 @@ Begin VB.Form frmTelaCadastros
       Caption         =   "Criar Venda"
       Height          =   735
       Left            =   840
-      TabIndex        =   15
+      TabIndex        =   13
       Top             =   4560
       Width           =   1935
    End
@@ -33,7 +41,7 @@ Begin VB.Form frmTelaCadastros
       Caption         =   "Vendas:"
       Height          =   1455
       Left            =   240
-      TabIndex        =   14
+      TabIndex        =   12
       Top             =   4080
       Width           =   12735
    End
@@ -41,7 +49,7 @@ Begin VB.Form frmTelaCadastros
       Caption         =   "Login / Logoff"
       Height          =   855
       Left            =   120
-      TabIndex        =   10
+      TabIndex        =   8
       Top             =   8280
       Width           =   2895
    End
@@ -51,7 +59,7 @@ Begin VB.Form frmTelaCadastros
       Caption         =   "Funcionario"
       Height          =   735
       Left            =   840
-      TabIndex        =   9
+      TabIndex        =   7
       Top             =   2640
       Width           =   1935
    End
@@ -59,25 +67,25 @@ Begin VB.Form frmTelaCadastros
       Appearance      =   0  'Flat
       Caption         =   "Serviço"
       Height          =   735
-      Left            =   8280
-      TabIndex        =   8
-      Top             =   1440
+      Left            =   3240
+      TabIndex        =   6
+      Top             =   2640
       Width           =   1935
    End
    Begin VB.CommandButton tbCargo 
       Appearance      =   0  'Flat
       Caption         =   "Cargo"
       Height          =   735
-      Left            =   3360
-      TabIndex        =   7
-      Top             =   2640
+      Left            =   840
+      TabIndex        =   5
+      Top             =   1320
       Width           =   1935
    End
    Begin VB.CommandButton cbBanco 
       Caption         =   "Carregar Banco"
       Height          =   735
       Left            =   11400
-      TabIndex        =   5
+      TabIndex        =   3
       Top             =   8400
       Width           =   1695
    End
@@ -85,18 +93,9 @@ Begin VB.Form frmTelaCadastros
       Appearance      =   0  'Flat
       Caption         =   "Categoria"
       Height          =   735
-      Left            =   5880
-      TabIndex        =   3
-      Top             =   1440
-      Width           =   1935
-   End
-   Begin VB.CommandButton cbStatus 
-      Appearance      =   0  'Flat
-      Caption         =   "Status"
-      Height          =   735
-      Left            =   3360
-      TabIndex        =   2
-      Top             =   1440
+      Left            =   3240
+      TabIndex        =   1
+      Top             =   1320
       Width           =   1935
    End
    Begin VB.Frame frCadastros 
@@ -107,22 +106,13 @@ Begin VB.Form frmTelaCadastros
       TabIndex        =   0
       Top             =   840
       Width           =   12735
-      Begin VB.CommandButton cbPonto 
-         Appearance      =   0  'Flat
-         Caption         =   "Ponto"
-         Height          =   735
-         Left            =   600
-         TabIndex        =   1
-         Top             =   600
-         Width           =   1935
-      End
    End
    Begin VB.Frame frBanco 
       BackColor       =   &H8000000D&
       Caption         =   "Banco de dados:"
       Height          =   855
       Left            =   3240
-      TabIndex        =   4
+      TabIndex        =   2
       Top             =   8280
       Width           =   8055
       Begin VB.Label lbBanco 
@@ -130,7 +120,7 @@ Begin VB.Form frmTelaCadastros
          Caption         =   "Sem Banco de dados Carregado..."
          Height          =   255
          Left            =   240
-         TabIndex        =   6
+         TabIndex        =   4
          Top             =   480
          Width           =   7575
       End
@@ -139,7 +129,7 @@ Begin VB.Form frmTelaCadastros
       Alignment       =   2  'Center
       Height          =   255
       Left            =   12120
-      TabIndex        =   13
+      TabIndex        =   11
       Top             =   120
       Width           =   855
    End
@@ -147,7 +137,7 @@ Begin VB.Form frmTelaCadastros
       Alignment       =   2  'Center
       Height          =   255
       Left            =   11160
-      TabIndex        =   12
+      TabIndex        =   10
       Top             =   120
       Width           =   855
    End
@@ -156,7 +146,7 @@ Begin VB.Form frmTelaCadastros
       Caption         =   "Nenhum Usuário"
       Height          =   255
       Left            =   240
-      TabIndex        =   11
+      TabIndex        =   9
       Top             =   120
       Width           =   5055
    End
@@ -176,9 +166,6 @@ Begin VB.Form frmTelaCadastros
       Begin VB.Menu mbFuncionario 
          Caption         =   "Funcionario"
       End
-      Begin VB.Menu mbPonto 
-         Caption         =   "Ponto"
-      End
       Begin VB.Menu mbServico 
          Caption         =   "Serviço"
       End
@@ -187,9 +174,6 @@ Begin VB.Form frmTelaCadastros
       End
       Begin VB.Menu mbCategoria 
          Caption         =   "Categoria"
-      End
-      Begin VB.Menu mbStatus 
-         Caption         =   "Status"
       End
    End
 End
@@ -234,6 +218,15 @@ End If
 End Sub
 
 
+Private Sub cbRelatorios_Click()
+If boolAutenticacao = True Then
+    frmRelatorios.Show
+Else
+    MsgBox "Função não disponível para o usuário logado", vbCritical, "Erro"
+End If
+
+End Sub
+
 Private Sub cbServico_Click()
 If boolAutenticacao = True And lbAdmin = "Admin" Then
     frmServico.Show
@@ -260,10 +253,11 @@ End If
 End Sub
 
 Private Sub Form_Load()
-lbBanco.Caption = App.Path & "\" & "database" & "\" & "database.mdb"
-sFilePath = lbBanco.Caption
-sLogPath = App.Path & "\" & "log.txt"
-Call CriaBanco(sFilePath)
+    lbBanco.Caption = App.Path & "\" & "database" & "\" & "database.mdb"
+    sFilePath = lbBanco.Caption
+    sLogPath = App.Path & "\" & "log.txt"
+    sReportPath = App.Path & "\" & "reports" & "\"
+    Call CriaBanco(sFilePath)
 End Sub
 
 

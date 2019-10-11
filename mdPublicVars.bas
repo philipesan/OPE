@@ -6,6 +6,7 @@ Public con As New ADODB.Connection, strConn As String, rs As New ADODB.Recordset
 'Caminho do DB
 Public sFilePath As String
 Public sLogPath As String
+Public sReportPath As String
 Public MD5 As New clsMD5
 Public boolAutenticacao As Boolean
 

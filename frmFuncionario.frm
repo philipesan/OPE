@@ -97,7 +97,7 @@ Begin VB.Form frmFuncionario
       _ExtentX        =   2778
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   141361153
+      Format          =   68288513
       CurrentDate     =   43747
    End
    Begin VB.TextBox tbPis 
@@ -198,7 +198,7 @@ Begin VB.Form frmFuncionario
       _ExtentX        =   2778
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   141361153
+      Format          =   35848193
       CurrentDate     =   43747
    End
    Begin MSComCtl2.DTPicker DtDemissao 
@@ -210,7 +210,7 @@ Begin VB.Form frmFuncionario
       _ExtentX        =   2778
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   141361153
+      Format          =   35848193
       CurrentDate     =   43747
    End
    Begin VB.Label lbConta 
@@ -407,27 +407,7 @@ Private Sub Label2_Click()
 
 End Sub
 
-Private Sub Label1_Click()
-
-End Sub
-
 Private Sub lbCert_Click()
-
-End Sub
-
-Private Sub lbSenha_Click()
-
-End Sub
-
-Private Sub Picture1_Click()
-
-End Sub
-
-Private Sub tbPis_Change()
-
-End Sub
-
-Private Sub tbSenha_Change()
 
 End Sub
 
@@ -435,6 +415,3 @@ Private Sub Text3_Change()
 
 End Sub
 
-Private Sub Text1_Change()
-
-End Sub

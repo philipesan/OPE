@@ -5,15 +5,22 @@ Begin VB.Form frmCriarVenda
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Criar Venda"
    ClientHeight    =   10605
-   ClientLeft      =   45
-   ClientTop       =   375
+   ClientLeft      =   5550
+   ClientTop       =   180
    ClientWidth     =   11475
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    ScaleHeight     =   10605
    ScaleWidth      =   11475
-   StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton cbConcluir 
+      Caption         =   "Concluir Ordem"
+      Height          =   615
+      Left            =   240
+      TabIndex        =   34
+      Top             =   9720
+      Width           =   11055
+   End
    Begin VB.CommandButton cbLimpar 
       Caption         =   "Limpar Campos"
       Height          =   375
@@ -349,7 +356,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 Private Sub cbAdicionar_Click()
-    Dim SubTotal, Desconto, Adicional As Double
+    Dim SubTotal, desconto, adicional As Double
     Dim Servico As Integer
     Dim ServicoNome As String
     
@@ -368,9 +375,10 @@ Private Sub cbAdicionar_Click()
             End If
             If IsNumeric(tbDesconto1.text) Then
                 SubTotal = SubTotal - CDbl(tbDesconto1.text)
+                desconto = tbDesconto1.text
             End If
             lbSubvalor.Caption = SubTotal
-            fgVendaItens.AddItem Servico & Chr(9) & ServicoNome & Chr(9) & Adicional & Chr(9) & Desconto & Chr(9) & SubTotal & Chr(9)
+            fgVendaItens.AddItem Servico & Chr(9) & ServicoNome & Chr(9) & adicional & Chr(9) & desconto & Chr(9) & SubTotal & Chr(9)
             lbTotalValor.Caption = Format(CDbl(lbTotalValor.Caption) + SubTotal, "#####0.00")
         End If
     End If
@@ -386,14 +394,46 @@ Private Sub cbAtualizaPreco_Click()
         Else
             SubTotal = CDbl(Mid(coServico1.text, InStrRev(coServico1.text, "$") + 1))
             If ckAdicional1.value = 1 Then
-                SubTotal = SubTotal + CDbl(lbAdicional1.Caption)
+                SubTotal = Format(SubTotal + CDbl(lbAdicional1.Caption), "#####0.00")
             End If
             If IsNumeric(tbDesconto1.text) Then
-                SubTotal = SubTotal - CDbl(tbDesconto1.text)
+                SubTotal = Format(SubTotal - CDbl(tbDesconto1.text), "#####0.00")
             End If
             lbSubvalor.Caption = SubTotal
         End If
     End If
+End Sub
+
+Private Sub cbConcluir_Click()
+    
+    Dim id_ordem As Integer 'Variavel que recebe o ID da ordem de serviço
+    Dim max_rows As Integer 'Variavel que recebe o número máximo de colunas
+    Dim id_linha As Integer, id_servico As Integer
+    Dim valor As Double, desconto As Double, adicional As Double
+    
+    'Pega a quantidade de colunas
+    max_rows = fgVendaItens.Rows
+    
+    'Fazendo a inserção do cabeçalho da ordem
+    id_ordem = ExportaBancoOrdem
+    
+    'Percorre o FlexGrid
+    For id_linha = 1 To max_rows - 1
+        
+        'Pega os valores
+        id_servico = CInt(fgVendaItens.TextMatrix(id_linha, 0))
+        adicional = CDbl(fgVendaItens.TextMatrix(id_linha, 2))
+        desconto = CDbl(IIf(fgVendaItens.TextMatrix(id_linha, 3) <> "", fgVendaItens.TextMatrix(id_linha, 3), 0))
+        valor = CDbl(fgVendaItens.TextMatrix(id_linha, 4))
+        
+        'Insere a linha no banco
+        Call ExportaBancoOrdemServicos(id_ordem, id_linha, id_servico, valor, desconto, adicional)
+        
+    Next
+    
+    MsgBox "Venda cadastrada com sucesso!"
+    Call cbLimpar_Click
+    Call cbLimparGrid_Click
 End Sub
 
 Private Sub cbLimpar_Click()
@@ -420,11 +460,22 @@ Private Sub cbLimparGrid_Click()
     fgVendaItens.text = "Desconto"
     fgVendaItens.Col = 4
     fgVendaItens.text = "Valor total"
+    lbTotalValor.Caption = "000,00"
+    
 
 End Sub
 
 Private Sub cbRemover_Click()
-    fgVendaItens.RemoveItem fgVendaItens.Row
+    Dim Subtrai As Double
+    
+    If fgVendaItens.Rows = 2 Then
+        Call cbLimparGrid_Click
+    Else
+        Subtrai = fgVendaItens.TextMatrix(fgVendaItens.Row, 4)
+        lbTotalValor.Caption = Format(CDbl(lbTotalValor.Caption - Subtrai), "#####0.00")
+
+        fgVendaItens.RemoveItem fgVendaItens.Row
+    End If
 End Sub
 
 Private Sub coCategoria_LostFocus()
@@ -503,6 +554,8 @@ fgVendaItens.ColAlignment(0) = 0
 fgVendaItens.ColAlignment(1) = 0
 fgVendaItens.ColAlignment(2) = 1
 fgVendaItens.ColAlignment(3) = 1
+
+con.Close
 
 
 End Sub

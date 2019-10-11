@@ -34,3 +34,12 @@ Exit Sub
 
 
 End Sub
+Public Function ExecutarRetornoID(ByVal sSQL As String) As Integer
+    Dim retorno As Integer
+    Call Log("Executando query: " & sSQL)
+    con.Execute sSQL, , adCmdText + adExecuteNoRecords
+    Set rs = con.Execute("SELECT @@Identity", , adCmdText)
+    Call Log("Query Executada com Sucesso! ID retornado: " & Val(rs.Fields(0).value))
+    retorno = Val(rs.Fields(0).value)
+    ExecutarRetornoID = retorno
+End Function

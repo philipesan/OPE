@@ -80,9 +80,11 @@ Public Sub CriaTabelasOrdens()
 
 'Adiciona a Tabela e as linhas
 Call Log("Criando Tabela ordem")
-dbtemp.Execute ("Create table ordens (id_ordem AUTOINCREMENT, cliente text(50), telefone text(11), email text(30), categoria int, documento text(11), valor_total money, hora DATETIME)")
+dbtemp.Execute ("Create table ordens (id_ordem AUTOINCREMENT, cliente text(50), marca text, modelo text, placa text, telefone text(11), email text(30), categoria int, documento text(11), valor_total money, hora text, usuario INT, status INT)")
 dbtemp.Execute ("ALTER TABLE ordens ADD CONSTRAINT ordensPk PRIMARY KEY (id_ordem)")                                        'Adiciona a chave primaria da tabela
 dbtemp.Execute ("ALTER TABLE ordens ADD CONSTRAINT categoriaFk FOREIGN KEY(categoria) REFERENCES categorias(id_categoria)")  'Adiciona a chave estrangeira
+dbtemp.Execute ("ALTER TABLE ordens ADD CONSTRAINT statusFk FOREIGN KEY(status) REFERENCES status(id_status)")  'Adiciona a chave estrangeira
+dbtemp.Execute ("ALTER TABLE ordens ADD CONSTRAINT funcionarios_vendaFk FOREIGN KEY(usuario) REFERENCES funcionarios(matricula)")  'Adiciona a chave estrangeira
 dbtemp.Execute ("CREATE INDEX indexordens ON ordens(id_ordem)")                                                            'Adiciona o indice da tabela
 
 Call Log("Tabela ordens criada com sucesso!")
@@ -92,7 +94,7 @@ Public Sub CriaTabelasOrdem_Servicos()
 
 'Adiciona a Tabela e as linhas
 Call Log("Criando Tabela ordem_servicos...")
-dbtemp.Execute ("Create table ordem_servicos (id_linha INT, id_ordem INT, id_servico INT, valor money, desconto money, adicional money, status INT)")
+dbtemp.Execute ("Create table ordem_servicos (id_linha INT, id_ordem INT, id_servico INT, valor money, desconto money, adicional money)")
 dbtemp.Execute ("ALTER TABLE ordem_servicos ADD CONSTRAINT ordemFk FOREIGN KEY(id_ordem) REFERENCES ordens(id_ordem)")  'Adiciona a chave estrangeira
 dbtemp.Execute ("ALTER TABLE ordem_servicos ADD CONSTRAINT servicoFk FOREIGN KEY(id_servico) REFERENCES servicos(id_servico)")  'Adiciona a chave estrangeira
 
