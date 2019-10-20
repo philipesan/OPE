@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmCategoria 
-   BackColor       =   &H8000000D&
+   BackColor       =   &H00FFC0C0&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Cadastro de Categoria"
    ClientHeight    =   1245
@@ -46,7 +46,7 @@ Begin VB.Form frmCategoria
       Width           =   3495
    End
    Begin VB.Label lbAdicional 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Adicional:"
       Height          =   255
       Left            =   3840
@@ -55,7 +55,7 @@ Begin VB.Form frmCategoria
       Width           =   1215
    End
    Begin VB.Label lbnome 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Nome:"
       Height          =   255
       Left            =   120

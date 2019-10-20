@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFlxGrd.ocx"
 Begin VB.Form frmCriarVenda 
-   BackColor       =   &H8000000D&
+   BackColor       =   &H00FFC0C0&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Criar Venda"
    ClientHeight    =   10605
@@ -77,7 +77,7 @@ Begin VB.Form frmCriarVenda
       Appearance      =   0
    End
    Begin VB.CheckBox ckAdicional1 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Adicional: R$"
       Enabled         =   0   'False
       Height          =   255
@@ -126,7 +126,7 @@ Begin VB.Form frmCriarVenda
       Width           =   3495
    End
    Begin VB.Frame frCliente 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Dados do Cliente:"
       Height          =   1335
       Left            =   240
@@ -141,7 +141,7 @@ Begin VB.Form frmCriarVenda
          Width           =   10095
       End
       Begin VB.Label lbEmail 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "E-mail:"
          Height          =   255
          Left            =   7440
@@ -150,7 +150,7 @@ Begin VB.Form frmCriarVenda
          Width           =   495
       End
       Begin VB.Label lbTelefone 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Telefone:"
          Height          =   255
          Left            =   4680
@@ -159,7 +159,7 @@ Begin VB.Form frmCriarVenda
          Width           =   735
       End
       Begin VB.Label lbDocumento 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Documento: "
          Height          =   255
          Left            =   120
@@ -168,7 +168,7 @@ Begin VB.Form frmCriarVenda
          Width           =   975
       End
       Begin VB.Label lbNome 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Nome:"
          Height          =   255
          Left            =   120
@@ -192,7 +192,7 @@ Begin VB.Form frmCriarVenda
       Width           =   1815
    End
    Begin VB.Frame frAutomovel 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Dados do Automóvel:"
       Height          =   975
       Left            =   240
@@ -215,7 +215,7 @@ Begin VB.Form frmCriarVenda
          Width           =   1815
       End
       Begin VB.Label lbCategoria 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Categoria: "
          Height          =   255
          Left            =   7560
@@ -224,7 +224,7 @@ Begin VB.Form frmCriarVenda
          Width           =   735
       End
       Begin VB.Label lbModelo 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Modelo:"
          Height          =   255
          Left            =   5040
@@ -233,7 +233,7 @@ Begin VB.Form frmCriarVenda
          Width           =   615
       End
       Begin VB.Label lbMarca 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Marca:"
          Height          =   255
          Left            =   2520
@@ -242,7 +242,7 @@ Begin VB.Form frmCriarVenda
          Width           =   495
       End
       Begin VB.Label lbPlaca 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Placa:"
          Height          =   255
          Left            =   120
@@ -253,7 +253,7 @@ Begin VB.Form frmCriarVenda
    End
    Begin VB.Label lbTotalValor 
       Alignment       =   1  'Right Justify
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "000.00"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -272,7 +272,7 @@ Begin VB.Form frmCriarVenda
    End
    Begin VB.Label lbTotal 
       Alignment       =   2  'Center
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Total: R$"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -298,7 +298,7 @@ Begin VB.Form frmCriarVenda
       Y2              =   9480
    End
    Begin VB.Label lbSubvalor 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Height          =   255
       Left            =   10320
       TabIndex        =   26
@@ -306,7 +306,7 @@ Begin VB.Form frmCriarVenda
       Width           =   975
    End
    Begin VB.Label lbSubtotal 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Subtotal: R$"
       Height          =   255
       Left            =   9240
@@ -323,7 +323,7 @@ Begin VB.Form frmCriarVenda
       Y2              =   3600
    End
    Begin VB.Label lbAdicional1 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Height          =   255
       Left            =   5760
       TabIndex        =   22
@@ -331,7 +331,7 @@ Begin VB.Form frmCriarVenda
       Width           =   735
    End
    Begin VB.Label lbDesconto1 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Desconto: "
       Height          =   255
       Left            =   6480
@@ -340,7 +340,7 @@ Begin VB.Form frmCriarVenda
       Width           =   855
    End
    Begin VB.Label lbServico1 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Serviço:"
       Height          =   255
       Left            =   360

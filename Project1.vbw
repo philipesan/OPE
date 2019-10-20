@@ -17,4 +17,4 @@ frmLogin = 242, 221, 1413, 884, , 292, 191, 1463, 854, C
 mdChecaAutenticacao = 101, 115, 1272, 778, 
 frmCriarVenda = 229, 28, 1400, 691, , -298, 55, 873, 843, C
 frmRelatorios = 156, 156, 1074, 490, , 156, 156, 955, 590, C
-mdRelatoriosCSV = 0, 0, 918, 334, Z
+mdRelatoriosCSV = 0, 0, 918, 334, 

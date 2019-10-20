@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomct2.ocx"
 Begin VB.Form frmFuncionario 
-   BackColor       =   &H8000000D&
+   BackColor       =   &H00FFC0C0&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Cadastro de Usuários"
    ClientHeight    =   8730
@@ -80,7 +80,7 @@ Begin VB.Form frmFuncionario
       Width           =   2415
    End
    Begin VB.CheckBox lbAtivo 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Funcionário Ativo"
       Height          =   195
       Left            =   7560
@@ -97,7 +97,7 @@ Begin VB.Form frmFuncionario
       _ExtentX        =   2778
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   68288513
+      Format          =   143982593
       CurrentDate     =   43747
    End
    Begin VB.TextBox tbPis 
@@ -198,7 +198,7 @@ Begin VB.Form frmFuncionario
       _ExtentX        =   2778
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   35848193
+      Format          =   143982593
       CurrentDate     =   43747
    End
    Begin MSComCtl2.DTPicker DtDemissao 
@@ -210,11 +210,11 @@ Begin VB.Form frmFuncionario
       _ExtentX        =   2778
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   35848193
+      Format          =   143982593
       CurrentDate     =   43747
    End
    Begin VB.Label lbConta 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Conta:"
       Height          =   375
       Left            =   4800
@@ -223,7 +223,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbAgencia 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Agência:"
       Height          =   375
       Left            =   2520
@@ -232,7 +232,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbBanco 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Banco:"
       Height          =   375
       Left            =   120
@@ -241,7 +241,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbEmail 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Telefone:"
       Height          =   255
       Left            =   3600
@@ -250,7 +250,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbTelefone 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Telefone:"
       Height          =   375
       Left            =   120
@@ -259,7 +259,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label Label1 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Data de Demissão:"
       Height          =   255
       Left            =   5760
@@ -268,7 +268,7 @@ Begin VB.Form frmFuncionario
       Width           =   1695
    End
    Begin VB.Label lbContra 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Data de Contratação:"
       Height          =   255
       Left            =   3840
@@ -277,7 +277,7 @@ Begin VB.Form frmFuncionario
       Width           =   1695
    End
    Begin VB.Label lbDtNasc 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Data de Nascimento:"
       Height          =   255
       Left            =   1920
@@ -286,7 +286,7 @@ Begin VB.Form frmFuncionario
       Width           =   1695
    End
    Begin VB.Label lbUF 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "UF:"
       Height          =   255
       Left            =   8880
@@ -295,7 +295,7 @@ Begin VB.Form frmFuncionario
       Width           =   615
    End
    Begin VB.Label lbSerie 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Série:"
       Height          =   255
       Left            =   7080
@@ -304,7 +304,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbCTPS 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "CTPS:"
       Height          =   255
       Left            =   5400
@@ -313,7 +313,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbCPF 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "CPF:"
       Height          =   255
       Left            =   2880
@@ -322,7 +322,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbRG 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "RG:"
       Height          =   255
       Left            =   120
@@ -331,7 +331,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbPIS 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "PIS:"
       Height          =   255
       Left            =   120
@@ -340,7 +340,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbSenha 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Senha:"
       Height          =   255
       Left            =   4200
@@ -349,7 +349,7 @@ Begin VB.Form frmFuncionario
       Width           =   1095
    End
    Begin VB.Label lbCargo 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Cargo"
       Height          =   255
       Left            =   120
@@ -358,7 +358,7 @@ Begin VB.Form frmFuncionario
       Width           =   2895
    End
    Begin VB.Label lbNome 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Nome Completo:"
       Height          =   255
       Left            =   120

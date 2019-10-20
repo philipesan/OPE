@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmLogin 
-   BackColor       =   &H8000000D&
+   BackColor       =   &H00FFC0C0&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Login"
    ClientHeight    =   2040
@@ -34,7 +34,7 @@ Begin VB.Form frmLogin
       Width           =   3975
    End
    Begin VB.Frame frLogin 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Login"
       Height          =   1215
       Left            =   240

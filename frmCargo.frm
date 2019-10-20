@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmCargo 
-   BackColor       =   &H8000000D&
+   BackColor       =   &H00FFC0C0&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Cadastro de Cargos"
    ClientHeight    =   3030
@@ -30,7 +30,7 @@ Begin VB.Form frmCargo
       Width           =   1335
    End
    Begin VB.CheckBox ckRh 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Acesso RH"
       Height          =   375
       Left            =   120
@@ -39,7 +39,7 @@ Begin VB.Form frmCargo
       Width           =   2655
    End
    Begin VB.CheckBox ckAdmin 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Acesso Administrador"
       Height          =   375
       Left            =   120
@@ -63,7 +63,7 @@ Begin VB.Form frmCargo
       Width           =   4215
    End
    Begin VB.Label lbSalario 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Salário:"
       Height          =   375
       Left            =   120
@@ -72,7 +72,7 @@ Begin VB.Form frmCargo
       Width           =   2535
    End
    Begin VB.Label lbNome 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Nome: "
       Height          =   375
       Left            =   120

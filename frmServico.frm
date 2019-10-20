@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmServico 
-   BackColor       =   &H8000000D&
+   BackColor       =   &H00FFC0C0&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Cadastro de Serviço"
    ClientHeight    =   3525
@@ -52,7 +52,7 @@ Begin VB.Form frmServico
       Width           =   7695
    End
    Begin VB.Label lbValor 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Valor Base:"
       Height          =   255
       Left            =   240
@@ -61,7 +61,7 @@ Begin VB.Form frmServico
       Width           =   855
    End
    Begin VB.Label lbDescricao 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Descricao:"
       Height          =   255
       Left            =   240
@@ -70,7 +70,7 @@ Begin VB.Form frmServico
       Width           =   975
    End
    Begin VB.Label lbNome 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Nome:"
       Height          =   255
       Left            =   240

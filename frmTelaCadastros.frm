@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmTelaCadastros 
-   BackColor       =   &H8000000D&
+   BackColor       =   &H00FFC0C0&
    Caption         =   "EAC - Estética Automotiva"
    ClientHeight    =   9360
    ClientLeft      =   285
@@ -37,7 +37,7 @@ Begin VB.Form frmTelaCadastros
       Width           =   1935
    End
    Begin VB.Frame frVendas 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Vendas:"
       Height          =   1455
       Left            =   240
@@ -99,7 +99,7 @@ Begin VB.Form frmTelaCadastros
       Width           =   1935
    End
    Begin VB.Frame frCadastros 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Cadastros:"
       Height          =   3015
       Left            =   240
@@ -108,7 +108,7 @@ Begin VB.Form frmTelaCadastros
       Width           =   12735
    End
    Begin VB.Frame frBanco 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Banco de dados:"
       Height          =   855
       Left            =   3240
@@ -116,7 +116,7 @@ Begin VB.Form frmTelaCadastros
       Top             =   8280
       Width           =   8055
       Begin VB.Label lbBanco 
-         BackColor       =   &H8000000D&
+         BackColor       =   &H00FFC0C0&
          Caption         =   "Sem Banco de dados Carregado..."
          Height          =   255
          Left            =   240

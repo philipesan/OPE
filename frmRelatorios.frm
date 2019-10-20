@@ -1,7 +1,7 @@
 VERSION 5.00
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomct2.ocx"
 Begin VB.Form frmRelatorios 
-   BackColor       =   &H8000000D&
+   BackColor       =   &H00FFC0C0&
    Caption         =   "Relatórios"
    ClientHeight    =   1980
    ClientLeft      =   60
@@ -12,7 +12,7 @@ Begin VB.Form frmRelatorios
    ScaleWidth      =   7500
    StartUpPosition =   3  'Windows Default
    Begin VB.OptionButton opFuncionarios 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Relatórios de Funcionários"
       Height          =   255
       Left            =   360
@@ -21,7 +21,7 @@ Begin VB.Form frmRelatorios
       Width           =   2175
    End
    Begin VB.OptionButton opVendas 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Relatórios de Vendas"
       Height          =   255
       Left            =   360
@@ -38,11 +38,11 @@ Begin VB.Form frmRelatorios
       _ExtentX        =   2355
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   135135233
+      Format          =   143982593
       CurrentDate     =   43749
    End
    Begin VB.Frame frRelatorios 
-      BackColor       =   &H8000000D&
+      BackColor       =   &H00FFC0C0&
       Caption         =   "Relatórios"
       Height          =   1455
       Left            =   120
@@ -66,7 +66,7 @@ Begin VB.Form frmRelatorios
          _ExtentX        =   2355
          _ExtentY        =   661
          _Version        =   393216
-         Format          =   135135235
+         Format          =   143982595
          CurrentDate     =   43749
       End
    End
